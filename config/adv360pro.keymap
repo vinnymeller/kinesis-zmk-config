@@ -22,69 +22,29 @@
 
         base_layer {
             bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog 1         &mo 3     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &tog 4         &none     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &mo 1         &mo 1     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp DEL   &kp Q     &kp W     &kp E     &kp R     &kp T     &mo 1         &mo 2     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
                 &kp ESC   &hm_l LGUI A  &hm_l LALT S    &hm_shift_l LSHFT D     &hm_l LCTRL F     &kp G     &none          &none     &kp H     &hm_r RCTRL J     &hm_shift_r RSHFT K     &hm_r LALT L     &hm_r RGUI SEMI  &kp SQT
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-                &mo 2     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
+                &mo 1     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
                                                                   &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
                                                         &kp SPACE  &kp BSPC   &kp HOME       &kp PG_UP &kp TAB &kp ENTER
                                                                             &kp END        &kp PG_DN
             >;
         };
 
-        keypad {
+        layer_fn {
             bindings = <
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     ___
-                ___       ___       ___       ___       ___       ___                                ___       &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    ___
+                ___       &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    ___            ___       &kp F6    &kp F7     &kp F8       &kp F9        &kp F10         &kp F11
+                ___       ___       ___       &kp LBRC  &kp RBRC  &kp TILDE ___            ___       ___       &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp F12
+                ___       ___       ___       &kp LPAR  &kp RPAR  ___       ___            ___       ___       &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     ___
+                ___       ___       ___       &kp LBKT  &kp RBKT  ___                                ___       &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    ___
                 ___       ___       ___       ___       ___                                                    &kp KP_N0  ___          &kp KP_DOT    ___             ___
                                                                   ___       ___            ___       ___
                                                         ___       ___       ___            ___       ___       ___
                                                                             ___            ___
             >;
         };
-
-        fn {
-            bindings = <
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    ___            ___       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___                                ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
-                                                                  ___       ___            ___       ___
-                                                        ___       ___       ___            ___       ___       ___
-                                                                            ___            ___
-            >;
-        };
-
-        mod {
-            bindings = <
-                ___       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 ___              ___         &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 ___
-                ___       ___          ___          ___          ___             ___          &bootloader      &bootloader ___          ___              ___          ___          ___          ___
-                ___       ___          ___          ___          ___             ___          ___              ___         ___          ___              ___          ___          ___          ___
-                ___       ___          ___          ___          ___             ___                                       ___          ___              ___          ___          ___          ___
-                ___       ___          ___          &bl BL_INC   &bl BL_DEC                                                             &bl BL_INC       &bl BL_DEC   ___          ___          ___
-                                                                                 &bt BT_CLR   &bt BT_CLR       &bt BT_CLR  &bt BT_CLR
-                                                                 &rgb_ug RGB_TOG &bl BL_TOG   ___              ___         &bl BL_TOG   &rgb_ug RGB_TOG
-                                                                                              ___              ___
-            >;
-        };
-
-        mouse {
-            bindings = <
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___                                ___       ___       ___       ___       ___       ___
-                ___       ___       ___       U_MS_L    U_MS_R                                                 U_MS_U    U_MS_D    ___       ___       ___
-                                                                  U_BTN3    ___            ___       U_BTN3
-                                                        U_BTN1    U_BTN2    U_WH_L         U_WH_U    U_BTN2    U_BTN1
-                                                                            U_WH_R         U_WH_D
-            >;
-        };
-
     };
 
 };
