@@ -10,6 +10,9 @@
 #include "mouse.dtsi"
 
 #define ___ &trans
+#define DFLT 0
+#define SYMB 1
+#define TSTR 2
 
 / {
     /* remove unused keys from layout and move thumb cluster to bottom */
@@ -29,7 +32,7 @@
 // ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤ ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
     &kp ESC              &hm_l LGUI A         &hm_l LALT S         &hm_shift_l LSHFT D  &hm_l LCTRL F        &kp G                &none                  &none                &kp H                &hm_r RCTRL J        &hm_shift_r RSHFT K  &hm_r LALT L         &hm_r RGUI SEMI       &kp SQT
 // ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┴────────────────────┤ ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
-    &kp LSHFT            &kp Z                &kp X                 &kp C               &kp V                 &kp B                                                           &kp N                &kp M                &kp COMMA            &kp DOT              &kp FSLH              &kp RSHFT
+    &kp LSHFT            &kp Z                &kp X                 &kp C               &kp V                 &kp B                                                           &kp N                &hm_r M                &kp COMMA            &kp DOT              &kp FSLH              &kp RSHFT
 // ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────╯                                           ╰────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
     &mo 1                &kp GRAVE            &kp CAPS              &kp LEFT             &kp RIGHT                                                                                                  &kp UP              &kp DOWN             &kp LBKT             &kp RBKT              &mo 2
 // ╰────────────────────┴────────────────────┴────────────────────┴────────────────────┴────────────────────╯                                                                                     ╰────────────────────┴────────────────────┴────────────────────┴────────────────────┴────────────────────╯
@@ -45,11 +48,11 @@
 
         layer_fn {
             bindings = <
-                ___       &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    ___            ___       &kp F6    &kp F7     &kp F8       &kp F9        &kp F10         &kp F11
-                ___       ___       ___       &kp LBRC  &kp RBRC  &kp TILDE ___            ___       ___       &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp F12
-                ___       ___       ___       &kp LPAR  &kp RPAR  ___       ___            ___       ___       &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     ___
-                ___       ___       ___       &kp LBKT  &kp RBKT  ___                                ___       &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    ___
-                ___       ___       ___       ___       ___                                                    &kp KP_N0  ___          &kp KP_DOT    ___             ___
+                ___       &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    ___            ___       &kp F6    &kp F7     &kp F8       &kp F9        &kp F10      &kp F11
+                ___       ___       ___       &kp LBRC  &kp RBRC  &kp TILDE ___            ___       ___       &kp N7     &kp N8       &kp N9        &kp MINUS    &kp F12
+                ___       ___       ___       &kp LPAR  &kp RPAR  ___       ___            ___       ___       &kp N4     &kp N5       &kp N6        &kp PLUS     ___
+                ___       ___       ___       &kp LBKT  &kp RBKT  ___                                ___       &kp N1     &kp N2       &kp N3        &kp ENTER    ___
+                ___       ___       ___       ___       ___                                                    &kp N0     ___          &kp DOT       ___          ___
                                                                   ___       ___            ___       ___
                                                         ___       ___       ___            ___       ___       ___
                                                                             ___            ___
